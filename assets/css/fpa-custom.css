@@ -1,0 +1,131 @@
+html { scroll-behavior: smooth; }
+body {
+    color: #555;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    line-height: 1.4;
+    padding-top: 60px;
+}
+
+/** printing page-breaks ******************************************************/
+@media print {
+    @page { margin: 2cm 2.54cm; }
+    .page-break {
+        page-break-after: always !important;
+        break-after: all !important;
+    }
+}
+
+
+/** override (BS & Yeti) with custom darker blue ******************************/
+.bg-fpa-dark,
+nav.bg-primary.bg-fpa-dark,
+.bg-primary.bg-fpa-dark .dropdown-menu { background-color: #224872 !important; }
+.border-fpa-dark { border-color: #224872 !important; }
+.text-fpa-dark { color: #224872; }
+
+/** offcanvas menu ************************************************************/
+@media (max-width: 991.98px) {
+    .offcanvas-collapse {
+        position: fixed;
+        top: 60px; /* Height of navbar */
+        bottom: 0;
+        right: -270px;
+        width: 270px;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: #224872;
+        transition-timing-function: ease-in-out;
+        transition-duration: .3s;
+        transition-property: right, visibility;
+    }
+    .offcanvas-collapse.open {
+        right: 0;
+        visibility: visible;
+    }
+  }
+
+
+/** override Yeti theme back to BS4 for -info elements ************************/
+.bg-info,
+.badge-info,
+.btn-info { background-color: #17a2b8 !important; }
+.border-info,
+.btn-info { border-color: #17a2b8 !important; }
+.btn-info:hover {
+    color: #fff !important;
+    background-color: #138496 !important;
+    border-color: #117a8b !important;
+}
+.btn-outline-info {
+    color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+.btn-outline-info:hover {
+    color: #fff !important;
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+.text-info { color: #17a2b8 !important; }
+.alert-info {
+    color: #0c5460 !important;
+    background-color: #d1ecf1 !important;
+    border-color: #bee5eb !important;
+}
+.bg-light { background-color: rgba(0,0,0,0.03) !important; }
+
+/** new/custon styling classes ************************************************/
+#stickyDownload { margin-top: -60px; padding-top: 60px; };
+.text-size-xl { font-size: 1.15rem !important; }
+.text-size-lg { font-size: 1.10rem !important; }
+.text-size-md { font-size: 0.95rem !important; }
+.text-size-sm { font-size: 0.85rem !important; }
+.text-size-xs { font-size: 0.80rem !important; }
+
+/** Google material icon sizes ************************************************/
+.mis12 { font-size: 12px !important; }
+.mis14 { font-size: 14px !important; }
+.mis16 { font-size: 16px !important; }
+.mis18 { font-size: 18px !important; }
+.mis20 { font-size: 20px !important; }
+.mis22 { font-size: 22px !important; }
+.mis24 { font-size: 24px !important; }
+.mis32 { font-size: 32px !important; }
+.mis36 { font-size: 36px !important; }
+.mis42 { font-size: 42px !important; }
+.mis48 { font-size: 48px !important; }
+.mis52 { font-size: 52px !important; }
+.mis64 { font-size: 64px !important; }
+.mis68 { font-size: 68px !important; }
+.mis72 { font-size: 72px !important; }
+.mis96 { font-size: 96px !important; }
+.mis128 { font-size: 128px !important; }
+.mis256 { font-size: 256px !important; }
+
+
+/* toTop icon *****************************************************************/
+#toTop {
+    color: #e99002 !important;
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+  }
+#toTop:hover { color: #d08002 !important; }
+
+/** reset any unwanted yeti theme media-query sizes ***************************/
+@media (min-width: 1200px) {
+    .container { max-width: 1180px; } /* from 1140px */
+}
+@media (min-width: 1680px) {
+    .container { max-width: 1280px; } /* from 1140px */
+}
