@@ -1,3 +1,4 @@
+![Forum Post Assist Project](https://forumpostassistant.github.io/docs/assets/project-files/logos-and-icons/fpa-logo-icon-01.png)
 # Forum Post Assistant Help & Documentation Website
 The Forum Post Assistant Project uses Github pages to publish information to assist with downloading, installing, using and understanding the "Forum Post Assistant" (FPA).
 
