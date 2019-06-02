@@ -1,4 +1,6 @@
 title: Forum Post Assistant
-description: Cayman is a clean, responsive theme for GitHub Pages.
+description: Forum Post Assistant Documentation 7 Help Site.
 show_downloads: true
 baseurl: /docs
+analytics-id: UA-141181265-1
+exclude: [README.md]
