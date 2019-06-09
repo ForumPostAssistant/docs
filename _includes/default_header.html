@@ -2,12 +2,17 @@
                 <div class="row h-100 align-items-center">
                     <div class="col-lg-8">
 
-                            <h1 class="mt-4 mb-0 text-white text-center text-lg-left">Forum Post Assistant</h1>
-                            <h2 class="h1 display-4 text-white m-0 text-center text-lg-left">Documentation<br class="d-xl-none"> and Help</h2>
+                        <h1 class="mt-4 mb-0 text-white text-center text-lg-left">Forum Post Assistant</h1>
+                        <h2 class="h1 display-4 text-white m-0 text-center text-lg-left">Documentation<br class="d-xl-none"> and Help</h2>
 
                         <p class="lead mb-3 text-white-50 text-justify text-lg-left d-print-none">
-                            The Forum Post Assistant (FPA) script has been developed to assist Joomla<sup>&trade;</sup> forum posters to be able to post relevant system, instance, PHP and troubleshooting information directly in to a pre-formatted forum post. This will save a few hours of posting back and forth, asking for, and explaining how to acquire useful information in order for other forum users to help troubleshoot a problem.
-                        </p>
+                            {% for repository in site.github.public_repositories %}  
+                                {% case repository.name %}
+                                    {% when "FPA" %}
+                                        {{repository.description}}  
+                                {% endcase %}
+                            {% endfor %}                            
+                        </p>  
 
                     </div>
                     <div class="col-lg-4 text-center d-print-none">
