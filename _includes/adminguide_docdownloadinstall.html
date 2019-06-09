@@ -1,25 +1,150 @@
 
 
-                                <div class="card border-0 w-100">
-                                    <h3 class="card-title text-info ml-3 my-0 py-1 px-2 bg-light border-info border-bottom w-100">
-                                        <i class="material-icons-outlined mis32" style="vertical-align:sub;">cloud_download</i> Download and Install FPA
-                                    </h3>
-                                    <div class="card-body">
-                                        <p class="card-text text-size-md">
-                                            FPA is a standalone script written in PHP, it <strong>does not</strong> install through the Joomla! Installer and must be manually installed.
-                                            This means that FPA users are required to download the FPA Package, extract it and upload the script to the website themselves using either their hosting File Manager tools
-                                            or an FTP/SCP Client.
-                                        </p>
+                <div class="card border-0 w-100">
+                    <h3 class="card-title text-info ml-3 my-0 py-1 px-2 bg-light border-info border-bottom w-100">
+                        <i class="material-icons-outlined mis32" style="vertical-align:sub;">cloud_download</i> Download and Install FPA
+                    </h3>
+                    <div class="card-body">
+                        <p class="card-text">
+                            FPA is a standalone script written in PHP, it <strong>does not</strong> install through the Joomla! Installer and must be manually installed.
+                            This means that FPA users are required to download the FPA Package, extract it and upload the script to the website themselves using either their hosting File Manager tools
+                            or an FTP/SCP Client.
+                        </p>
 
-                                        <h4 class="display-6 mt-5 mb-2">Download The FPA Package</h4>
-                                        <p class="card-text text-size-md">
-                                            Download the latest FPA release from this site, or access any beta releases if preferred from the <a href="https://github.com/ForumPostAssistant/FPA/releases" rel="noreferrer" target="_blank">FPA Project on Github</a>.
-                                        </p>
-                                        <p class="text-center mt-5">
-                                            <a href="https://github.com/ForumPostAssistant/FPA/releases/latest" rel="noreferrer" target="_blank" class="btn btn-info btn-lg col-12 col-md-8 mb-2 text-center pr-4"><i class="material-icons-outlined mis22 pl-2 float-left" style="vertical-align:sub;">cloud_download</i> Download Latest FPA Now!</a>
-                                        </p>
 
-                                        <h4 class="display-6 mt-5 mb-2">Extract The FPA Package</h4>
-                                        <p class="card-text text-size-md">Work-in-Progress</p>
-                                    </div>
-                                </div><!-- /.card -->
+                        <h4 class="display-6 mt-5 mb-2">Download The FPA Package</h4>
+                        <p class="card-text">
+                            Ensure that you are working with the latest release of FPA. This can be downloaded below, or access any beta releases if preferred from the <a href="https://github.com/ForumPostAssistant/FPA/releases" rel="noreferrer" target="_blank">FPA Project on Github</a>.
+                        </p>
+                        <p class="text-center mt-5">
+                            <a href="https://github.com/ForumPostAssistant/FPA/zipball/en-GB" rel="noreferrer" target="_blank" class="btn btn-info btn-lg col-12 col-md-6 mb-2 text-center pr-4"><i class="material-icons-outlined mis22 pl-2 float-left" style="vertical-align:sub;">cloud_download</i> Download Latest FPA Here!</a>
+                        </p>
+
+
+                        <h4 class="display-6 mt-5 mb-2">Extract The FPA Package</h4>
+                        <p class="card-text">Locate the downloaded FPA file and extract/unzip the FPA package on your own computer, you should now have the following folders and files available.</p>
+                        <p class="card-text">You will need an extraction/un-archiving utility to extract the files. Windows users can simply double-click the downloaded FPA file or right-click and use the native
+                        Windows Extract Tool, Linux/Unix/Mac users can use use the native Tar/Zip utilities. Alternatively, you can also use tools such as
+                        <a href="https://www.winzip.com/" rel="noreferrer" target="_blank">WinZip</a>,
+                        <a href="https://www.7-zip.org/" rel="noreferrer" target="_blank">7-Zip</a>, or
+                        <a href="http://www.peazip.org" rel="noreferrer" target="_blank">PeaZip</a>
+                        </p>
+
+                        <div class="table-responsive-md mt-4">
+                            <table class="table table-striped table-bordered">
+                                <caption>Forum Post Assistant Package Contents</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="mw-25">Package Contents</th>
+                                        <th scope="col" class="mw-25">Folder/File Name</th>
+                                        <th scope="col">Purpose</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="7" class="bg-white"><img class="img-fluid shadow" src="../assets/images/fpa_package_file_structure.jpg" alt="FPA Package File Structure" style="max-width: 300px;" /></td>
+                                        <td class="text-nowrap" scope="row">Documentation/</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-nowrap" scope="row">Documentation/FPA First Time User.pdf</td>
+                                        <td>Brief instructions on how to use</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-nowrap" scope="row">Documentation/images/</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-nowrap" scope="row">Documentation/LICENSE.txt</td>
+                                        <td>Copy of the GNU General Public License v3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-nowrap" scope="row">Documentation/README.txt</td>
+                                        <td>Information about the FPA Project and the FPA script (in text format)</td>
+                                    </tr>
+                                    <tr class="text-info">
+                                        <td class="text-nowrap" scope="row">fpa-en.php</td>
+                                        <td>The Forum Post Assistant script</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-nowrap" scope="row">README.markdown</td>
+                                        <td>Information about the FPA Project and the FPA script (in markdown format)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <h4 class="display-6 mt-5 mb-2">Upload The FPA Script</h4>
+                        <p class="card-text">The FPA script file now needs to be uploaded to your where your website is located, there are several methods to achieve this depending on your knowledge, experience and web hosting setup.</p>
+                        <p class="card-text"><strong class="text-info">Note:</strong> The Forum Post Assistant script <strong><em>does not</em></strong> need any configuring or editing before uploading.</p>
+
+                        <div class="container-fluid mt-5">
+                            <div class="row">
+
+                                <div class="col-12 col-lg-6 px-lg-4 px-md-3 px-0 d-flex">
+
+                                    <div class="card text-white bg-info mb-5">
+                                        <div class="card-header text-center lead">
+                                            Upload Using An FTP <small>(File Transfer Protocol)</small> Client
+                                        </div>
+                                        <div class="card-body bg-white text-dark text-center">
+                                            <p class="card-text lead">
+                                                To use this method you will need to have FTP Access to your web hosting account and your account login credentials, including a working FTP Client app/software installed.
+                                            </p>
+                                            <p class="card-text text-muted">
+                                                You can use your operating systems native FTP command-line tools or any of the following File Transfer (FTP) or Secure Copy (SCP) applications will do the job:
+                                                <a href="https://panic.com/transmit/" rel="noreferrer" target="_blank">Transmit</a>,
+                                                <a href="https://winscp.net/" rel="noreferrer" target="_blank">WinSCP</a>,
+                                                <a href="https://cyberduck.io/" rel="noreferrer" target="_blank">CyberDuck</a>,
+                                                <a href="https://filezilla-project.org/" rel="noreferrer" target="_blank">FileZilla</a>
+                                            </p>
+                                        </div>
+                                        <div class="card-footer bg-white"><a href="#ftpclient" class="btn btn-info btn-block">Go To FTP Instructions</a></div>
+                                    </div><!-- /.card -->
+
+                                </div><!-- /.col-* -->
+                                <div class="col-12 col-lg-6 px-lg-4 px-md-3 px-0 d-flex">
+
+                                    <div class="card text-white bg-info mb-5">
+                                        <div class="card-header text-center lead">
+                                            Upload Using A Hosting Control Panel File Manager
+                                        </div>
+                                        <div class="card-body bg-white text-dark text-center">
+                                            <p class="card-text lead">
+                                                To use this method you will need to have access to your hosting Control Panel and your account login credentials.
+                                            </p>
+                                            <p class="card-text text-muted">
+                                                In some cases you may need to access your hosts Client Portal first, then access you hosting Control Panel.
+                                            </p>
+                                            <p class="card-text text-muted">
+                                                Common hosting Control Panels are:
+                                                <a href="https://www.cpanel.net/products/" rel="noreferrer" target="_blank">cPanel & WHM</a>,
+                                                <a href="https://www.plesk.com/features/" rel="noreferrer" target="_blank">Plesk</a>,
+                                                <a href="https://www.directadmin.com/" rel="noreferrer" target="_blank">DirectAdmin</a>,
+                                                <a href="http://www.webmin.com/" rel="noreferrer" target="_blank">Webmin</a>
+                                            </p>
+                                        </div>
+                                        <div class="card-footer bg-white"><a href="#filemanager" class="btn btn-info btn-block">Go To <strong>File Manager</strong> Instructions</a></div>
+                                    </div><!-- /.card -->
+
+                                </div><!-- /.col-* -->
+
+                            </div><!-- /.row -->
+                        </div><!-- /.container-fluid -->
+
+
+                        <div class="mb-5" id="ftpclient">
+                            <h5 class="bg-light p-2">Upload FPA Using FTP</h5>
+                            <p class="card-text">Work In Progress</p>
+                        </div>
+
+
+                        <div class="mb-5" id="filemanager">
+                            <h5 class="bg-light p-2">Upload FPA Using A File Manager</h5>
+                            <p class="card-text">Work In Progress</p>
+                        </div>
+
+
+                    </div>
+                </div><!-- /.card -->
