@@ -1,7 +1,208 @@
----
-layout: adminguide
----
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr" vocab="http://schema.org/">
+    <head>
 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+
+        <!-- do the social-thang -->
+        <meta property="og:title" content="Forum Post Assistant - Administrator Guide" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://forumpostassistant.github.io/docs/admin-guide/" />
+        <meta property="og:image" content="https://forumpostassistant.github.io/docs/assets/images/fpa-docs-project-github-pages-social-media-share-062019.jpg" />
+        <meta property="og:description" content="Administrator Guide for the Joomla! Content Management System Forum Post Assistant." />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Forum Post Assistant - Administrator Guide" />
+        <meta name="twitter:description" content="Administrator Guide for the Joomla! Content Management System Forum Post Assistant." />
+        <meta name="twitter:image:src" content="https://forumpostassistant.github.io/docs/assets/images/fpa-docs-project-github-pages-social-media-share-062019.jpg" />
+
+        <!-- do the meta-thang -->
+        <meta itemprop="name" content="Forum Post Assistant - Administrator Guide" />
+        <meta itemprop="description" content="Administrator Guide for the Joomla! Content Management System Forum Post Assistant." />
+        <meta itemprop="image" content="https://forumpostassistant.github.io/docs/assets/images/fpa-docs-project-github-pages-social-media-share-062019.jpg" />
+
+        <!-- and of course, everyone/thing else -->
+        <meta name="description" content="Administrator Guide for the Joomla! Content Management System Forum Post Assistant." />
+        <meta name="keywords" content="joomla, forum, post, fpa, documentation, help, problem resolution" />
+        <meta name="author" content="Forum Post Assistant Project">
+        <meta name="rights" content="Copyright 2011-Present, RussW and FPA Project. All rights reserved." />
+        <meta name="generator" content="FPA Project" />
+
+        <!-- Start: Google Structured Data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://forumpostassistant.github.io/docs/",
+            "name": "FPA Project - Documentation & Help",
+            "alternateName": "FPA Documentation"
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://forumpostassistant.github.io/docs/",
+            "logo": "https://forumpostassistant.github.io/docs/assets/project-files/logos-and-icons/fpa-logo-icon-01.png"
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "FPA Project - Documentation & Help",
+            "url": "https://forumpostassistant.github.io/docs/",
+            "sameAs": [
+                "https://github.com/ForumPostAssistant/docs/"
+            ]
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://forumpostassistant.github.io/docs/"
+            },
+            "headline": "Forum Post Assistant Project - Administrator Guide",
+            "description": "Administrator Guide for the Joomla! Content Management System Forum Post Assistant.",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://forumpostassistant.github.io/docs/assets/images/fpa-docs-project-github-pages-social-media-share-062019.jpg"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "FPA Project"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "FPA Project - Documentation & Help",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://forumpostassistant.github.io/docs/assets/project-files/logos-and-icons/fpa-logo-icon-01.png"
+                }
+            },
+            "datePublished": "2019-06-01T08:58:22+00:00",
+            "dateCreated": "2019-06-01T08:58:22+00:00",
+            "dateModified": "2020-06-13T00:25:03+00:00"
+        }
+        </script>
+        <!-- End: Google Structured Data -->
+
+        <!-- DNS prefetch & cross-origin preconnect -->
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+        <link rel="dns-prefetch" href="https://ocsp.digicert.com/">
+        <link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com/">
+        <link rel="dns-prefetch" href="https://code.jquery.com/">
+        <link rel="dns-prefetch" href="https://camo.githubusercontent.com">
+        <link rel='preconnect' href='https://github.com/' crossorigin>
+
+
+        <title>Forum Post Assistant - Administrator Guide</title>
+
+        <!-- Google Search Console -->
+        <meta name="google-site-verification" content="BC00Ai7NJ1Kq6HTybclTzxsA3nuPfKmRCaYPBUx9Prg" />
+
+        <!-- not forgetting all the rest of cute'sie stuff -->
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+        <link rel="apple-touch-icon-precomposed" type="image/png" href="../assets/images/apple-icon-precomposed.png">
+
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.0/yeti/bootstrap.min.css" integrity="sha256-99KgWr1SjvkqT7dcWV+Cj9yfsKF2j4wrVRgHJYAiEtU=" crossorigin="anonymous" />
+
+        <!-- Custom styles for this template -->
+        <link href="../assets/css/fpa-custom.css" rel="stylesheet">
+
+        <!-- Google Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+
+
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KMKMX4N');
+        </script>
+        <!-- End Google Tag Manager -->
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141181265-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{site.analytics-id}}');
+        </script>
+
+    </head>
+    <body id="startHere">
+
+
+        <nav id="primary-menu" class="navbar navbar-expand-lg navbar-dark bg-primary bg-fpa-dark fixed-top shadow-sm">
+            <div class="container-fluid mx-md-3">
+
+                <a class="navbar-brand mis24" href="https://forumpostassistant.github.io/docs/">
+                    <i class="material-icons text-white mis32" style="vertical-align:sub;">widgets</i> FPA Project
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="offcanvas" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse" id="navbarColor01">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-size-md smooth-scroll active" href="../">
+                                <i class="material-icons mis18" style="vertical-align:sub;">widgets</i> Get FPA
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-size-md smooth-scroll active" href="#fpa-AG">
+                                <i class="material-icons mis18" style="vertical-align:sub;">recent_actors</i> Administrator Guide
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-size-md" href="https://github.com/ForumPostAssistant/FPA" rel="noreferrer" target="_blank">Github Project</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+
+            </div><!-- /.container -->
+        </nav>
+
+
+
+
+        <header class="bg-primary py-3 shadow-sm">
+            <div class="container-fluid h-100">
+
+                <div class="row mx-md-3 h-100">
+                    <div class="col-12">
+
+                        <h1 class="display-4 text-white text-center mt-1 mb-0 text-lg-left"><i class="material-icons-outlined mis68" style="vertical-align:sub;">recent_actors</i> Administrator Guide</h1>
+                        <h2 class="text-white mt-0 mb-2 text-center text-lg-left">Forum Post Assistant</h2>
+
+                </div>
+                </div><!-- /.row -->
+
+            </div><!-- /.container -->
+        </header>
+
+
+
+        <main>
 
             <section id="fpa-AG" class="mt-3 mt-5 pb-5">
                 <div class="container-fluid">
@@ -14,7 +215,90 @@ layout: adminguide
                                     <i class="material-icons-outlined mis32" style="vertical-align:sub;">vertical_split</i> Index
                                 </h3>
 
-                                {% include adminguide_docindex.html %}
+                                <div class="list-group list-group-flush sidebar-nav mb-2">
+                                    <a class="list-group-item list-group-item-action smooth-scroll" href="#fpa-AGInstall">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 text-info">
+                                                <i class="material-icons-outlined mis22" style="vertical-align:sub;">cloud_download</i> Download & Install FPA
+                                            </h5>
+                                        </div>
+                                        <p class="mb-0">
+                                            Downloading and unarchiving the FPA package, then uploading the FPA script.
+                                        </p>
+                                    </a>
+
+                                    <a class="list-group-item list-group-item-action smooth-scroll" href="#fpa-AGRun">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 text-info">
+                                                <i class="material-icons-outlined mis22" style="vertical-align:sub;">view_list</i> Access & Generate Posts
+                                            </h5>
+                                        </div>
+                                        <p class="mb-0">
+                                            Accessing and running the FPA script, and generating data for a forum post.
+                                        </p>
+                                    </a>
+
+                                    <a class="list-group-item list-group-item-action smooth-scroll" href="#fpa-AGSettings">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 text-info">
+                                                <i class="material-icons-outlined mis22" style="vertical-align:sub;">settings_applications</i> FPA Options & Settings
+                                            </h5>
+                                        </div>
+                                        <p class="mb-0">
+                                            Configure and customise the FPA default settings to suit your issue needs.
+                                        </p>
+                                    </a>
+
+                                    <a class="list-group-item list-group-item-action smooth-scroll" href="#fpa-AGUnderstand">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 text-info">
+                                                <i class="material-icons-outlined mis22" style="vertical-align:sub;">chrome_reader_mode</i> Understanding The FPA
+                                            </h5>
+                                        </div>
+                                        <p class="mb-0">
+                                            Uunderstand and find your way around the FPA display and information.
+                                        </p>
+                                    </a>
+
+                                    <a class="list-group-item list-group-item-action smooth-scroll" href="#fpa-AGDelete">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 text-warning">
+                                                <i class="material-icons-outlined mis24" style="vertical-align:sub;">delete_forever</i> Deleting FPA
+                                            </h5>
+                                        </div>
+                                        <p class="mb-0">
+                                            How to delete the FPA script to assure your sites integrity and security.
+                                        </p>
+                                    </a>
+
+                                    <a class="list-group-item list-group-item-action smooth-scroll" href="#fpa-AGSecurity">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 text-warning">
+                                                <i class="material-icons-outlined mis22" style="vertical-align:sub;">security</i> FPA Security Implications
+                                            </h5>
+                                        </div>
+                                        <p class="mb-0">
+                                            Understand & appreciate the <em>Security implications</em> of the Forum Post Assistant.
+                                        </p>
+                                    </a>
+
+                                    <a class="list-group-item list-group-item-action smooth-scroll" href="#fpa-AGAdvanced">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1 text-primary">
+                                                <i class="material-icons-outlined mis22" style="vertical-align:sub;">admin_panel_settings</i> Advanced FPA Functions
+                                            </h5>
+                                        </div>
+                                        <p class="mb-0">
+                                            Understand advanced configuration and feature control of the Forum Post Assistant.
+                                        </p>
+                                    </a>
+
+                                </div><!--/.list-group .sidebar-nav -->
+
+                                <p class="text-center">
+                                    <a href="https://forum.joomla.org/" rel="noreferrer" target="_blank" class="text-center btn btn-primary btn-block mb-2">Joomla! Forum</a>
+                                    <a href="https://www.facebook.com/groups/joomlanospam/" rel="noreferrer" target="_blank" class="text-center btn btn-primary btn-block mb-2">Joomla! Facebook Group</a>
+                                </p>
 
                             </div><!-- /.sticky-top -->
 
@@ -29,7 +313,47 @@ layout: adminguide
 
                                             <a class="float-right d-print-none" href="javascript:window.print();"><i class="material-icons-outlined mis24" style="vertical-align:sub;">print</i></a>
 
-                                            {% include adminguide_docintro.html %}
+                                            <h3>FPA Introduction</h3>
+
+                                            <p class="card-text">
+                                                The <em>Forum Post Assistant Administrator Guide</em> is published in an effort to publicly provide as much useful information as possible
+                                                and to make the <em>FPA script</em> availble and accessible to the widest possible audience.
+                                            </p>
+                                            <p class="card-text">
+                                                The FPA Project, documentation & script are produced and maintained by volunteers, if you find any errors, ommissions or
+                                                innacuracies please raise an issue on the <a href="https://github.com/ForumPostAssistant/FPA" rel="noreferrer" target="_blank">FPA Project Github page</a>.
+                                            </p>
+                                            <p class="card-text text-muted text-size-sm">
+                                                Whilst the <em>Forum Post Assistant</em> and documentation are designed to help run, diagnose, analyse and eventually aid in problem resolution
+                                                with Joomla! websites, there are limitations to FPA's ability to help resolve every issue. If you observe issues with running FPA or are unable
+                                                to resolve the issue yourself, you may need to engage help from the Joomla! Forum or a Joomla! or web professional.
+                                            </p>
+
+                                            <h5 class="display-6 mt-5 mb-2">Minimum Requirements</h5>
+                                            <table class="table table-hover">
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Joomla! Version</th>
+                                                        <td>1.5.x, 1.6.x, 1.7.x, 2.5.x, 3.x, 4.x</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Web Server</th>
+                                                        <td>Agnostic<br />Apache, Nginx, Litespeed, IIS etc</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">PHP</th>
+                                                        <td>minimum v5.4</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">SQL Server</th>
+                                                        <td>Agnostic<br />MySQL, MySQLi, PostgreSQL, MariaDB</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Operating System</th>
+                                                        <td>Agnostic<br />Linux, Unix, Windows</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
 
                                         </div>
                                     </div><!-- /.card -->
@@ -38,21 +362,126 @@ layout: adminguide
                             </div><!-- /#fpa-AGIntro .row.inner-row -->
 
 
+
                             <div id="fpa-AGInstall" class="row inner-row mb-5 page-break">
-                                <div class="col-12 col-xl-9 mb-4 d-flex">
+                                <div class="col-12 mb-4 d-flex">
 
-                                    {% include adminguide_docdownloadinstall.html %}
-
-                                </div>
-                                <div class="col-12 col-xl-3 mb-4">
-
-                                    <div class="card border-0 bg-light">
+                                    <div class="card border-0 w-100">
+                                        <h3 class="card-title text-info ml-3 my-0 py-1 px-2 bg-light border-info border-bottom w-100">
+                                            <i class="material-icons-outlined mis32" style="vertical-align:sub;">cloud_download</i> Download and Install FPA
+                                        </h3>
                                         <div class="card-body">
-                                            <h6 class="text-muted">
-                                                <i class="material-icons-outlined mis16" style="vertical-align:sub;">comment</i> Tips & Tricks
-                                            </h6>
+                                            <p class="card-text">
+                                                FPA is a standalone script written in PHP, it <strong>does not</strong> install through the Joomla! Installer and must be manually installed.
+                                                This means that FPA users are required to download the FPA Package, extract it and upload the script to the website themselves using either their hosting File Manager tools
+                                                or an FTP/SCP Client.
+                                            </p>
 
-                                            {% include adminguide_docdownloadinstall_tips.html %}
+
+                                            <h4 class="display-6 mt-5 mb-2">Download The FPA Package</h4>
+                                            <p class="card-text">
+                                                Ensure that you are working with the latest release of FPA. This can be downloaded below, or access any beta releases if preferred from the <a href="https://github.com/ForumPostAssistant/FPA/releases" rel="noreferrer" target="_blank">FPA Project on Github</a>.
+                                            </p>
+                                            <p class="text-center mt-5">
+                                                <a href="https://github.com/ForumPostAssistant/FPA/zipball/en-GB" rel="noreferrer" target="_blank" class="btn btn-info btn-lg col-12 col-md-6 mb-2 text-center pr-4"><i class="material-icons-outlined mis22 pl-2 float-left" style="vertical-align:sub;">cloud_download</i> Download Latest FPA Here!</a>
+                                            </p>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">Extract The FPA Package</h4>
+                                            <p class="card-text">Locate the downloaded FPA file and extract/unzip the FPA package on your own computer, you should now have the following folders and files available.</p>
+                                            <p class="card-text">You will need an extraction/un-archiving utility to extract the files. Windows users can simply double-click the downloaded FPA file or right-click and use the native
+                                            Windows Extract Tool, Linux/Unix/Mac users can use use the native Tar/Zip utilities. Alternatively, you can also use tools such as
+                                            <a href="https://www.winzip.com/" rel="noreferrer" target="_blank">WinZip</a>,
+                                            <a href="https://www.7-zip.org/" rel="noreferrer" target="_blank">7-Zip</a>, or
+                                            <a href="http://www.peazip.org" rel="noreferrer" target="_blank">PeaZip</a>
+                                            </p>
+
+                                            <div class="table-responsive-md mt-4">
+                                                <table class="table table-striped table-bordered">
+                                                    <caption>Forum Post Assistant Package Contents</caption>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="mw-25">Folder/File Name</th>
+                                                            <th scope="col">Purpose</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-nowrap" scope="row">LICENSE</td>
+                                                            <td>Copy of the GNU General Public License v2</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap" scope="row">README.md</td>
+                                                            <td>Information about the FPA Project and the FPA script (as seen on the Github page)</td>
+                                                        </tr>
+                                                        <tr class="text-info">
+                                                            <td class="text-nowrap" scope="row">fpa-en.php</td>
+                                                            <td>The Forum Post Assistant script</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap" scope="row">security.md</td>
+                                                            <td>Information about FPA security and how to report an issue (in markdown format)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">Upload The FPA Script</h4>
+                                            <p class="card-text">The FPA script file now needs to be uploaded to your where your website is located, there are several methods to achieve this depending on your knowledge, experience and web hosting setup.</p>
+                                            <p class="card-text"><strong class="text-info">Note:</strong> The Forum Post Assistant script <strong><em>does not</em></strong> need any configuring or editing before uploading.</p>
+
+                                            <div class="container-fluid mt-5">
+                                                <div class="row">
+
+                                                    <div class="col-12 col-lg-6 pr-lg-3 pr-md-2 px-0 d-flex">
+
+                                                        <div class="card text-white bg-info mb-5">
+                                                            <div class="card-header text-center lead">
+                                                                Upload Using An FTP <small>(File Transfer Protocol)</small> Client
+                                                            </div>
+                                                            <div class="card-body bg-white text-dark text-center">
+                                                                <p class="card-text lead">
+                                                                    To use this method you will need to have FTP Access to your web hosting account and your account login credentials, including a working FTP Client app/software installed.
+                                                                </p>
+                                                                <p class="card-text text-muted">
+                                                                    You can use your operating systems native FTP command-line tools or any of the following File Transfer (FTP) or Secure Copy (SCP) applications will do the job:
+                                                                    <a href="https://panic.com/transmit/" rel="noreferrer" target="_blank">Transmit</a>,
+                                                                    <a href="https://winscp.net/" rel="noreferrer" target="_blank">WinSCP</a>,
+                                                                    <a href="https://cyberduck.io/" rel="noreferrer" target="_blank">CyberDuck</a>,
+                                                                    <a href="https://filezilla-project.org/" rel="noreferrer" target="_blank">FileZilla</a>
+                                                                </p>
+                                                            </div>
+                                                        </div><!-- /.card -->
+
+                                                    </div><!-- /.col-* -->
+                                                    <div class="col-12 col-lg-6 pl-lg-3 pl-md-2 px-0 d-flex">
+
+                                                        <div class="card text-white bg-info mb-5">
+                                                            <div class="card-header text-center lead">
+                                                                Upload Using A Hosting Control Panel File Manager
+                                                            </div>
+                                                            <div class="card-body bg-white text-dark text-center">
+                                                                <p class="card-text lead">
+                                                                    To use this method you will need to have access to your hosting Control Panel and your account login credentials.
+                                                                </p>
+                                                                <p class="card-text text-muted">
+                                                                    In some cases you may need to access your hosts Client Portal first, then access you hosting Control Panel.
+                                                                </p>
+                                                                <p class="card-text text-muted">
+                                                                    Common hosting Control Panels are:
+                                                                    <a href="https://www.cpanel.net/products/" rel="noreferrer" target="_blank">cPanel & WHM</a>,
+                                                                    <a href="https://www.plesk.com/features/" rel="noreferrer" target="_blank">Plesk</a>,
+                                                                    <a href="https://www.directadmin.com/" rel="noreferrer" target="_blank">DirectAdmin</a>,
+                                                                    <a href="http://www.webmin.com/" rel="noreferrer" target="_blank">Webmin</a>
+                                                                </p>
+                                                            </div>
+                                                        </div><!-- /.card -->
+
+                                                    </div><!-- /.col-* -->
+
+                                                </div><!-- /.row -->
+                                            </div><!-- /.container-fluid -->
 
                                         </div>
                                     </div><!-- /.card -->
@@ -61,21 +490,102 @@ layout: adminguide
                             </div><!-- /#fpa-AGInstall .row.inner-row -->
 
 
+
                             <div id="fpa-AGRun" class="row inner-row mb-5 page-break">
-                                <div class="col-12 col-xl-9 mb-4 d-flex">
+                                <div class="col-12 mb-4 d-flex">
 
-                                    {% include adminguide_docrun.html %}
-
-                                </div>
-                                <div class="col-12 col-xl-3 mb-4">
-
-                                    <div class="card border-0 bg-light">
+                                    <div class="card border-0 w-100">
+                                        <h3 class="card-title text-info ml-3 my-0 py-1 px-2 bg-light border-info border-bottom">
+                                            <i class="material-icons-outlined mis32" style="vertical-align:sub;">view_list</i> Access & Generate Posts
+                                        </h3>
                                         <div class="card-body">
-                                            <h6 class="text-muted">
-                                                <i class="material-icons-outlined mis16" style="vertical-align:sub;">comment</i> Tips & Tricks
-                                            </h6>
 
-                                            {% include adminguide_docrun_tips.html %}
+                                            <h4 class="display-6 mt-5 mb-2">Access The FPA Script</h4>
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        To access the FPA script, once uploaded, open your preferred web-browser and in the address bar, enter you websites URL, with <em>fpa-en.php</em> appended to the URL. (EG: <em>https://www.your-domain-name.com.au/fpa-en.php</em>)
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-web-browser-url.jpg" alt="Enter the FPA address in a web-browser" />
+                                                    <p class="card-text text-size-md">
+                                                        If your website is installed in a sub-directory, you will need to append that directory name to the FPA URL as well. (EG: <em>https://www.your-domain-name.com.au/directory-name/fpa-en.php</em>)
+                                                    </p>
+                                                </li>
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        Once the FPA script has loaded, you will see the on-screen report. This is a graphical view of some audit and test routines run by the FPA to discover you hosting and Joomla! environments.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-screen-report-output.jpg" alt="FPA on-screen report after loading" />
+                                                    <p class="card-text text-size-md text-info border border-info p-2 mb-2 bg-white">
+                                                        <i class="material-icons-outlined mis24" style="vertical-align:sub;">emoji_objects</i><strong>TIP:</strong> It is advisable to review the on-screen FPA report as it may well have found and highlighted an issue that you can solve yourself without the need to post in the forum.
+                                                    </p>
+                                                </li>
+
+                                            </ul>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">Generate Forum Post Content</h4>
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        To generate the required content for a forum post, simply <strong>Click</strong> the <button class="btn btn-sm btn-success">Click Here To Generate Post</button> button.
+                                                    </p>
+                                                </li>
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        FPA will re-run and generate your forum post report/conent using the default options. Once the post content has been generated you will see a textarea containing the post content.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-copy-post-content.jpg" alt="Copy FPA Post Content" />
+                                                </li>
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        To copy the post content, simply <strong>Click</strong> the <button class="btn btn-sm btn-warning">Copy Post Content To Clipboard</button> button.
+                                                    </p>
+                                                </li>
+
+                                            </ul>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">Post FPA Content In To A Forum Post</h4>
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        Login in to your Joomla! Forum account. Create a new post, or new reply to an existing post.
+                                                    </p>
+                                                </li>
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        <strong>Click</strong> on the <strong>Full Editor & Preview</strong> button and go to the Options tab.
+                                                    </p>
+                                                    <p class="card-text text-size-md">
+                                                        Select <strong>Disable smilies</strong> and make sure that <strong>Disable BBCode is not selected</strong>.<br />
+                                                        <em>(Quick Start Guide - Steps 6, 7 & 8)</em>
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-joomla-forum-post-options.jpg" alt="Joomla Forum Post Options" />
+                                                </li>
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        Now paste the previously copied FPA Post Content in to the post textarea.<br />
+                                                        <em>(EG: right-click + paste or for Windows : [control] +v and for Mac OSX : [command] +v )</em>
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-paste-into-forum-post.jpg" alt="Paste FPA Post Content in to post" />
+                                                </li>
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md text-info border border-info p-2 mb-2 bg-white">
+                                                        <i class="material-icons-outlined mis24" style="vertical-align:sub;">emoji_objects</i><strong>TIP:</strong> If privacy is a concern, please santitise the post data before publicly posting to the forum.
+                                                    </p>
+                                                    <p class="card-text text-size-md">
+                                                        <strong>Click</strong> the <button class="btn btn-warning btn-sm">Submit</button> button to submit the FPA post.
+                                                    </p>
+                                                </li>
+
+                                            </ul>
 
                                         </div>
                                     </div><!-- /.card -->
@@ -84,21 +594,70 @@ layout: adminguide
                             </div><!-- /#fpa-AGRun .row.inner-row -->
 
 
+
                             <div id="fpa-AGSettings" class="row inner-row mb-5 page-break">
-                                <div class="col-12 col-xl-9 mb-4 d-flex">
+                                <div class="col-12 mb-4 d-flex">
 
-                                    {% include adminguide_docsettings.html %}
-
-                                </div>
-                                <div class="col-12 col-xl-3 mb-4">
-
-                                    <div class="card border-0 bg-light">
+                                    <div class="card border-0 w-100">
+                                        <h3 class="card-title text-info ml-3 my-0 py-1 px-2 bg-light border-info border-bottom">
+                                            <i class="material-icons-outlined mis32" style="vertical-align:sub;">settings_applications</i> FPA Options & Settings
+                                        </h3>
                                         <div class="card-body">
-                                            <h6 class="text-muted">
-                                                <i class="material-icons-outlined mis16" style="vertical-align:sub;">comment</i> Tips & Tricks
-                                            </h6>
+                                            <p class="card-text text-size-md">
+                                                The Forum Post Assistant provides an option to enter additional information to be posted and to display the results of a subset of the default tests.
+                                            </p>
 
-                                            {% include adminguide_docsettings_tips.html %}
+                                            <h4 class="display-6 mt-5 mb-2">Accessing The FPA Options Panel</h4>
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        To access the FPA <strong>options panel</strong>, <strong>Click</strong> the <button class="btn btn-outline-primary btn-sm">Open the FPA Options</button> button.
+                                                    </p>
+                                                </li>
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        If you choose to, you may now enter further details of what problem you are seeing and what you have already done to solve this issue.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-options-problem-description.jpg" alt="Enter the problem details in to FPA" />
+                                                    <p class="card-text text-size-md">
+                                                        <em>if there has been a recent PHP error reported, the FPA will automatically include this in the problem description, otherwise you can enter any error messages you have seen as well.</em>
+                                                    </p>
+                                                </li>
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        If you do not wish to select any optional "Runtime Options", <strong>Click</strong> the <button class="btn btn-success btn-sm">Click Here To Generate Post</button> button to re-run the FPA with the included problem description, otherwise review and select your desired "Runtime Options".
+                                                    </p>
+                                                </li>
+
+                                            </ul>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">FPA Runtime Options</h4>
+                                            <p class="card-text text-size-md">
+                                                By default, FPA runs with <strong>ALL</strong> runtime options selected in order to provide maximum troubleshooting information. However, this amuount of information may not always be required or can be distracting. You can disabled <em>(uncheck)</em> any unwanted option from the "Runtime Options panel".
+                                            </p>
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        If you choose to, or are requested to by someone assisting you, you may <em>uncheck</em> individual or multiple tests routines that are unrelated to your problem or simply not needed.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-options-runtime-options.jpg" alt="Select FPA runtime options" />
+                                                    <p class="card-text text-size-md">
+                                                        <strong class="font-weight-bold">Information Privacy:</strong> <em>The privacy option is <strong class="font-weight-bold">only applied to the graphical view</strong>, the Forum Post detail has already had sensitive and private information removed or hidden from the post output.</em>
+                                                    </p>
+                                                </li>
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        Once you have entered additional details or selected your desired "Runtime Options", <strong>Click</strong> the <button class="btn btn-success btn-sm">Click Here To Generate Post</button> button to re-run the FPA with the new options.
+                                                    </p>
+                                                </li>
+
+                                            </ul>
 
                                         </div>
                                     </div><!-- /.card -->
@@ -107,21 +666,159 @@ layout: adminguide
                             </div><!-- /#fpa-AGSettings .row.inner-row -->
 
 
+
                             <div id="fpa-AGUnderstand" class="row inner-row mb-5 page-break">
-                                <div class="col-12 col-xl-9 mb-4 d-flex">
+                                <div class="col-12 mb-4 d-flex">
 
-                                    {% include adminguide_docunderstand.html %}
-
-                                </div>
-                                <div class="col-12 col-xl-3 mb-4">
-
-                                    <div class="card border-0 bg-light">
+                                    <div class="card border-0 w-100">
+                                        <h3 class="card-title text-info ml-3 my-0 py-1 px-2 bg-light border-info border-bottom">
+                                            <i class="material-icons-outlined mis32" style="vertical-align:sub;">chrome_reader_mode</i> Understanding The FPA
+                                        </h3>
                                         <div class="card-body">
-                                            <h6 class="text-muted">
-                                                <i class="material-icons-outlined mis16" style="vertical-align:sub;">comment</i> Tips & Tricks
-                                            </h6>
+                                            <p class="card-text text-size-md">The Forum Post Assistant user interface is quite comprehensive and maybe a little daunting the first time it is used, please take a little time to familiarise yourself with where to find the the most frequently used information and functions.</p>
 
-                                            {% include adminguide_docunderstand_tips.html %}
+                                            <h4 class="display-6 mt-5 mb-2">FPA Toolbar</h4>
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        If you choose to, or are requested to by someone assisting you, you may <em>uncheck</em> individual or multiple tests routines that are unrelated to your problem or simply not needed.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-toolbar.jpg" alt="FPA toolbar" />
+                                                </li>
+
+                                                <li class="list-group-item list-group-item-action">
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-3 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="50" src="../assets/images/fpa-toolbar-delete.jpg" alt="FPA toolbar - Delete" />
+                                                            <br />Delete FPA
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="50" src="../assets/images/fpa-toolbar-docs.jpg" alt="FPA toolbar - Documentation Site" />
+                                                            <br />Go To Docs Site
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="50" src="../assets/images/fpa-toolbar-day-night.jpg" alt="FPA toolbar - Day/Night Mode" />
+                                                            <br />Light/Dark Mode
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="50" src="../assets/images/fpa-toolbar-download.jpg" alt="FPA toolbar - Download Latest" />
+                                                            <br />Download Latest FPA
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="50" src="../assets/images/fpa-toolbar-print2pdf.jpg" alt="FPA toolbar - Print To PDF" />
+                                                            <br />Print Output To PDF
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="50" src="../assets/images/fpa-toolbar-rerun-reset.jpg" alt="FPA toolbar - Reset & Rerun FPA" />
+                                                            <br />Reset & Rerun FPA
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="50" src="../assets/images/fpa-toolbar-privacy.jpg" alt="FPA toolbar - Privacy Options" />
+                                                            <br />GUI Privacy Option
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="50" src="../assets/images/fpa-toolbar-shortcuts.jpg" alt="FPA toolbar - Shortcut Menu" />
+                                                            <br />GUI Shortcut Menu
+                                                        </div>
+                                                    </div><!--/.row-->
+
+                                                </li>
+
+                                            </ul>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">FPA Environment Dashboard</h4>
+                                            <p class="card-text text-size-md">
+                                                The <em>Confidence Rating</em> is calculated based on the initial basic test results and compared to the Joomla! requirements and best practices to successfully run Joomla!
+                                            </p>
+
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        Displays the basic initial hosting environment audit results, including a <strong>Confidence Rating</strong> that Joomla! will run based on the results.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-environment-dashboard.jpg" alt="FPA Environment Dashboard" />
+                                                </li>
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <h5>Confidence Rating</h5>
+
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-6 text-center p-3">
+                                                            <p class="card-text text-size-md">
+                                                                The <em>Confidence Rating</em> is scored from <strong>F</strong> through <strong>A+</strong> as an indication of the hosting suitability to successfully run Joomla!
+                                                            </p>
+                                                            <img class="img-fluid shadow my-2" width="300" src="../assets/images/fpa-confidence-rating.jpg" alt="FPA Confidence Rating" />
+                                                            <p class="card-text text-size-md">
+                                                                <strong>Click</strong> the <em>Question Mark icon</em> to review what is tested for, and the environment test results.
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 text-center p-3">
+                                                            <img class="img-fluid shadow my-2" width="300" src="../assets/images/fpa-confidence-rating-detail.jpg" alt="FPA Confidence Rating Detail" />
+                                                        </div>
+                                                    </div><!--/.row-->
+
+                                                </li>
+
+                                            </ul>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">FPA Discovery Report</h4>
+                                            <p class="card-text text-size-md">
+                                                The <em>Discovery Report</em> displays groups of information, categorised in to relevenat areas, such as <strong><em>Joomla! Instance</em></strong>, <strong><em>PHP Configuration</em></strong>, <strong><em>Host/Server Information</em></strong>, <strong><em>Permisisons & Ownership</em></strong>, <strong><em>Database Configuration</em></strong> and <strong><em>Database Structure</em></strong>.
+                                            </p>
+
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        Displays the basic initial hosting environment audit results, including a <strong>Confidence Rating</strong> that Joomla! will run based on the results.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-discovery-report.jpg" alt="FPA Discovery Report" />
+                                                </li>
+
+                                            </ul>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">FPA Permissions Checks</h4>
+                                            <p class="card-text text-size-md">
+                                                The <em>Folder Permisiosns Checks Report</em> displays the permissions and modeset of the <strong><em>Joomla! Core Folders</em></strong> and if found, any other folders with <strong><em>Elevated Permisisons</em></strong>.
+                                            </p>
+
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        Several of the Joomla! "Core Folders" need to be <em>writable</em> to allow full function of Joomla! and many <em>Extensions</em>. This report provides an overview of the status of these folders.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-permissions-checks.jpg" alt="FPA Permissions Checks" />
+                                                    <p class="card-text text-size-md">
+                                                        If found, FPA will also list the first 10 non-core folders with <em>Elevated Permissions</em>. If folders require elevated permissions for Joomla! or Extensions to work, this may be inidicative or poor server configuration and may expose your site defacements or being compromised.
+                                                    </p>
+                                                </li>
+
+                                            </ul>
+
+
+                                            <h4 class="display-6 mt-5 mb-2">FPA Extension Audit</h4>
+                                            <p class="card-text text-size-md">
+                                                FPA produces an audit of all <em>available</em> Joomla! <strong>Extensions</strong> found within the site. This audit includes <strong><em>Components</em></strong>, <strong><em>Modules</em></strong>, <strong><em>Libraries</em></strong>, <strong><em>Plugins</em></strong> and <strong><em>Templates</em></strong>.
+                                            </p>
+
+                                            <ul class="list-group 1list-group-flush">
+
+                                                <li class="list-group-item list-group-item-action">
+                                                    <p class="card-text text-size-md">
+                                                        The <em>Extension Audit</em> searches the Joomla! instance and displays a categorised list of all discovered extensions, whether thay are "Core Extensions" (provided with Joomla!) or are "3rd Party" (provided by external developers) and if they are <em>Enabled or Disabled</em>.
+                                                    </p>
+                                                    <img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-extension-audit.jpg" alt="FPA Extension Audit" />
+                                                </li>
+
+                                            </ul>
+
 
                                         </div>
                                     </div><!-- /.card -->
@@ -130,21 +827,134 @@ layout: adminguide
                             </div><!-- /#fpa-AGUnderstand .row.inner-row -->
 
 
-                            <div id="fpa-AGDelete" class="row inner-row mb-5 page-break">
-                                <div class="col-12 col-xl-9 mb-4 d-flex">
 
-                                    {% include adminguide_docdelete.html %}
+                            <div id="fpa-AGDelete" class="row inner-row mb-5 page-break">
+                                <div class="col-12 mb-4 d-flex">
+
+                                    <div class="card border-0 w-100">
+                                        <h3 class="card-title text-warning ml-3 my-0 py-1 px-2 bg-light border-warning border-bottom">
+                                            <i class="material-icons-outlined mis36" style="vertical-align:sub;">delete_forever</i> Deleting FPA
+                                        </h3>
+                                        <div class="card-body">
+                                            <p class="card-text text-size-md">
+                                                The FPA script provides a <em>delete</em> button in the page toolbar, once you have finished using the FPA click the <span class="text-danger">Trash/Rubbish Bin Icon</span>.
+                                            </p>
+                                            <p class="text-center"><img class="img-fluid shadow my-3" width="500" src="../assets/images/fpa-toolbar-delete-button.jpg" alt="FPA toolbar Delete button" /></p>
+                                            <p class="card-text text-size-md">
+                                                The FPA script will attempt to self-delete itself. However, this may not work in all circumstances, if you receive a message stating it was unable to delete itself, you will need to manually delete the FPA script through <em>FTP</em> or via your hosting control panel <em>File Manager</em>
+                                            </p>
+                                            <p class="card-text text-size-md">
+                                                From FPA v1.6.0, an <em>Auto-Delete</em> featured was introduced, FPA will attempt to automatically self-delete itself the next time it is opened after being on your server for 5 days. Again, if your server configuration does not allow the <em>delete button</em> to work, this function will also be unable to delete FPA and you will need to manually delete the FPA still.
+                                            </p>
+                                            <p class="card-text text-muted text-size-md">
+                                                <em><span class="text-danger">Security Notice: </span>The FPA script may contain private information that could be used to obtain information by others to compromise your website. We recommend that you remove the FPA script after you use it.</em>
+                                            </p>
+                                        </div>
+                                    </div><!-- /.card -->
 
                                 </div>
-                                <div class="col-12 col-xl-3 mb-4">
+                            </div><!-- /#fpa-AGDelete .row.inner-row -->
 
-                                    <div class="card border-0 bg-light">
+
+
+                            <div id="fpa-AGSecurity" class="row inner-row mb-5 page-break">
+                                <div class="col-12 mb-4 d-flex">
+
+                                    <div class="card border-0">
+                                        <h3 class="card-title text-warning ml-3 my-0 py-1 px-2 bg-light border-warning border-bottom">
+                                            <i class="material-icons-outlined mis32" style="vertical-align:sub;">security</i> FPA Security Implications
+                                        </h3>
                                         <div class="card-body">
-                                            <h6 class="text-muted">
-                                                <i class="material-icons-outlined mis16" style="vertical-align:sub;">comment</i> Tips & Tricks
-                                            </h6>
+                                            <p class="card-text text-size-md">
+                                                The FPA script provides a lot of useful information to assist with diagnosing and resolving potential issues with your site, as such,
+                                                it may also be abused by providing the same useful information to unknown and malicious "<strong>bad actors</strong>" wishing to illegally
+                                                access, deface or compromise your site or server account.
+                                            </p>
+                                            <h4 class="mis16">Removing FPA From Your Server</h4>
+                                            <p class="card-text text-size-sm">
+                                                The FPA script may contain private information that could be used to obtain information by others to compromise your website. We recommend that you remove the FPA script after you use it.
+                                            </p>
+                                            <p class="card-text text-size-sm">
+                                                <em>From FPA v1.6.0, not only is there a delete button in the toolbar, but an <em>Auto-Delete</em> function has been implemented which will attempt to delete the FPA after 5 days on the server.</em>
+                                            </p>
+                                            <h4 class="mis16">Posting On Public Forums or Social Media</h4>
+                                            <p class="card-text text-size-sm">
+                                                Whilst the FPA script is of limited use if you don't post the output data for experienced users to analyse, it is important to appreciate that any information posted in
+                                                forums or on social media is publicly accessible, you should consider this before posting anywhere.
+                                            </p>
+                                            <h4 class="mis16">Providing Access To Unknown Actors</h4>
+                                            <p class="card-text text-size-sm">
+                                                Offers to assist and requests by <strong>unknown actors</strong> to login to your site may initially seem to be extremly helpful but the forum or other social media
+                                                groups <strong>do not vet members</strong> and cannot guarantee their validity or good intentions. Be careful of providing anyone access to your website or hosting accounts.
+                                            </p>
+                                            <h4 class="mis16">"My Sites been Hacked!"</h4>
+                                            <p class="card-text text-size-sm">
+                                                Whilst the FPA script may assist in highlighting poorly configured environments or potential points of access to your site, <strong>it is not</strong> designed
+                                                to be a security utility or intended to fix compromised sites. Ultimately the security of your website is <strong>your responsibility</strong> and the FPA Project does not
+                                                accept any responsibility if the FPA script is left on your server or your site is compromised and FPA cannot offer any assistance.
+                                            </p>
+                                        </div>
+                                    </div><!-- /.card -->
 
-                                            {% include adminguide_docdelete_tips.html %}
+                                </div>
+                            </div><!-- /#fpa-AGSecurity .row.inner-row -->
+
+
+
+                            <div id="fpa-AGAdvanced" class="row inner-row mb-5 page-break">
+                                <div class="col-12 mb-4 d-flex">
+
+                                    <div class="card border-0 w-100">
+                                        <h3 class="card-title text-primary ml-3 my-0 py-1 px-2 bg-light border-primary border-bottom">
+                                            <i class="material-icons-outlined mis32" style="vertical-align:sub;">admin_panel_settings</i> Advanced FPA Functions
+                                        </h3>
+                                        <div class="card-body">
+                                            <p class="card-text text-size-md">
+                                                These functions are designed for use by <em>Developers</em>, <em>Administrators</em> and <em>Advanced Users</em> only. <strong>There is no need to edit, modify or change them for normal use of the Forum Post Assistant.</strong>
+                                            </p>
+                                            <p class="card-text text-size-md">
+                                                To enable or disable any individual function/feature, simply comment-out or un-comment the appropriate constant.
+                                            </p>
+
+                                            <div class="table-responsive-md mt-4">
+                                                <table class="table table-striped table-bordered">
+                                                    <caption>Forum Post Assistant Advanced Functions</caption>
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="mw-25">Constant</th>
+                                                            <th scope="col">Function</th>
+                                                            <th scope="col">Purpose</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-nowrap" scope="row">_FPA_DEV</td>
+                                                            <td>Enable/Disable FPA <em>Developer Mode</em></td>
+                                                            <td>Enables PHP Error Display and shows array debug information.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap" scope="row">_FPA_SELF_DESTRUCT</td>
+                                                            <td>Enable/Disable FPA <em>Self Delete</em> feature</td>
+                                                            <td>Deletes the FPA script after "x" number of days, set by _FPA_SELF_DESTRUCT_AGE</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap" scope="row">_FPA_SSL_REDIRECT</td>
+                                                            <td>Enable/Disable FPA <em>Redirect To SSL</em> site</td>
+                                                            <td>Auto-redirects the FPA script to the SSL (https://) version of the domain if a valid (non-selfsighed, non-localhost) certificate is available.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap" scope="row">_LIVE_CHECK_FPA</td>
+                                                            <td>Enable/Disable <em>Check For Latest Version</em> of the FPA script</td>
+                                                            <td>Checks Github for the latest FPA release and compares to the current FPA in use.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap" scope="row">_LIVE_CHECK_JOOMLA</td>
+                                                            <td>Enable/Disable <em>Check For Latest Version</em> of the Joomla! CMS</td>
+                                                            <td>Checks download.joomla.orgfor the latest Joomla! release and compares to the discovered version.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
 
                                         </div>
                                     </div><!-- /.card -->
@@ -153,17 +963,84 @@ layout: adminguide
                             </div><!-- /#fpa-AGDelete .row.inner-row -->
 
 
-                            <div id="fpa-AGSecurity" class="row inner-row mb-5 page-break">
-                                <div class="col-12 col-xl-9 mb-4 d-flex">
-
-                                        {% include adminguide_docsecurity.html %}
-
-                                </div>
-                            </div><!-- /#fpa-AGSecurity .row.inner-row -->
-
 
                         </div><!-- /.col-lg-9 -->
                     </div><!-- /.row.outer-row -->
 
                 </div><!-- /.container -->
             </section><!-- /#fpa-AG -->
+
+        </main>
+
+
+
+        <footer class="py-3 bg-fpa-dark">
+            <div class="container text-size-xs">
+
+                <p class="text-center text-white-50 m-1 d-none d-print-block">https://github.com/ForumPostAssistant/FPA/</p>
+                <p class="text-center text-white m-1">Copyright<sup>&copy;</sup> RussW, Forum Post Assistant Project and Members</p>
+                <p class="text-center text-white-50 m-1">
+                    Forum Post Assistant (FPA) is not affiliated with or endorsed by The Joomla! Project<sup>&trade;</sup><br />
+                    Use of the Joomla!<sup>&reg;</sup> name, symbol, logo, and related trademarks is licensed by Open Source Matters, Inc.
+                </p>
+
+            </div><!-- /.container -->
+        </footer>
+
+
+        <button onclick="topFunction()" id="toTop" class="d-print-none" title="Go to top">
+            <i class="material-icons mis48">open_in_browser</i>
+        </button>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script>
+            /**
+             * smooth-scroll, add .smooth-scroll to anchor links
+             *
+             */
+            jQuery('.smooth-scroll').click(function(){
+                jQuery('html, body').animate({
+                    scrollTop: jQuery( $.attr(this, 'href') ).offset().top - 75
+                }, 200);
+                return false;
+            });
+
+
+            /**
+             * toTop button & stickyDownload buttons
+             * show when the user scrolls down 350px from the top of the document
+             *
+             */
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+                    document.getElementById("toTop").style.display = "block";
+                } else {
+                    document.getElementById("toTop").style.display = "none";
+                }
+            };
+
+            function topFunction() { // and scroll toTop when clicked
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            };
+
+
+            /**
+             * offcanvas mobile menu
+             *
+             */
+            jQuery(function () {
+                'use strict'
+                jQuery('[data-toggle="offcanvas"]').on('click', function () {
+                    jQuery('.offcanvas-collapse').toggleClass('open')
+                })
+            });
+        </script>
+
+    </body>
+</html>
